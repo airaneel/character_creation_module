@@ -2,6 +2,19 @@ from random import randint
 
 
 def attack(char_name, char_class):
+    """
+    Perform an attack action based on the character's class.
+
+    Args:
+        char_name (str): The name of the character.
+        char_class (str): The class of the character.
+
+    Returns:
+        str: The attack message indicating the damage dealt.
+
+    Raises:
+        None
+    """
     if char_class == 'warrior':
         return (f'{char_name} нанёс противнику урон, равный '
                 f'{5 + randint(3, 5)}')
@@ -14,6 +27,19 @@ def attack(char_name, char_class):
 
 
 def defence(char_name, char_class):
+    """
+    Perform a defense action based on the character's class.
+
+    Args:
+        char_name (str): The name of the character.
+        char_class (str): The class of the character.
+
+    Returns:
+        str: The defense message indicating the damage blocked.
+
+    Raises:
+        None
+    """
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} ед. урона')
     if char_class == 'mage':
@@ -23,6 +49,19 @@ def defence(char_name, char_class):
 
 
 def special(char_name, char_class):
+    """
+    Perform a special ability action based on the character's class.
+
+    Args:
+        char_name (str): The name of the character.
+        char_class (str): The class of the character.
+
+    Returns:
+        str: The special ability message.
+
+    Raises:
+        None
+    """
     if char_class == 'warrior':
         return (f'{char_name} применил специальное умение '
                 f'«Выносливость {80 + 25}»')
@@ -33,6 +72,19 @@ def special(char_name, char_class):
 
 
 def start_training(char_name, char_class):
+    """
+    Start the training session for the character.
+
+    Args:
+        char_name (str): The name of the character.
+        char_class (str): The class of the character.
+
+    Returns:
+        str: The message indicating the end of the training session.
+
+    Raises:
+        None
+    """
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — великий мастер ближнего боя.')
     if char_class == 'mage':
@@ -57,6 +109,18 @@ def start_training(char_name, char_class):
 
 
 def choice_char_class():
+    """
+    Choose the character class for the player.
+
+    Args:
+        None
+
+    Returns:
+        str: The chosen character class.
+
+    Raises:
+        None
+    """
     approve_choice = None
     char_class = None
     while approve_choice != 'y':
@@ -79,6 +143,18 @@ def choice_char_class():
 
 
 def main():
+    """
+    Start the game function.
+
+    Args:
+        None
+
+    Returns:
+        None
+
+    Raises:
+        None
+    """
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
     char_name = input('...назови себя: ')
